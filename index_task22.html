@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 20</title>
+</head>
+<body>
+    <div class="container">
+        <div class="categories"></div>
+        <div class="products"></div>
+        <div class="description"></div>
+    </div>
+
+    <form id="product-form" class="d-none" >
+        <label for="name">ПІБ:</label>
+        <input type="text" id="name" name="name" required><br>
+      
+        <label for="city">Мiсто:</label>
+        <select  name="city" id="city" required>
+            <option value="" disabled selected hidden>Виберiть мiсто</option>
+            <option value="Оdesa">Одеса</option>
+            <option value="Kyiv">Київ</option>
+            <option value="Dnipro">Днiпро</option>
+        </select><br>
+      
+        <label for="warehouseNum">Склад Нової Пошти:</label>
+        <input type="text" id="warehouseNum" name="warehouseNum" required><br>
+
+        <p class="selectPaymentType-header">Виберіть спосіб оплати:</p>
+        <label for="card">Карткою:</label>
+        <input type="radio" id="card" name="paymentType" value="card" required><br>
+
+        <label for="cash">Пiсляоплата:</label>
+        <input type="radio" id="cash" name="paymentType" value="cash" required><br>
+      
+        <label for="quantity">Кiлькiсть продукцiї:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required><br>
+      
+        <label for="comment"></label>
+        <textarea id="comment" name="comment" placeholder="Коментар до замовлення:" rows="5" cols="40"></textarea>
+        
+        <button type="button" onclick="submitForm()">Send</button>
+      </form>
+      
+      <div class="checkout-info-card">
+
+        
+      </div>
+
+
+
+    <style>
+        .container{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 25px;
+        }
+        .d-none{
+            display: none;
+        }
+        .container div{
+            width: 300px;
+        }
+        li { 
+            list-style: none;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+        h3{
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 23px;
+        }
+        button{
+            background-color: aquamarine;
+            border-radius: 5px;
+            border: solid 3px;
+            border-color: darkblue;
+            color:navy;
+            padding: 15px;
+            font-size: 16px;
+        }
+        .selectPaymentType-header{
+            margin: 0;
+        }
+        input {
+            margin: 10px 0px;
+        }
+
+    </style>
+    
+    <script src="main_task22.js"></script>
+</body>
+</html>
